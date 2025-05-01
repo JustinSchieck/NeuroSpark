@@ -1,0 +1,98 @@
+$input-bg: #fff;
+$input-border: #ddd;
+$focus-border: #007bff;
+$button-bg: #28a745;
+$button-hover: #218838;
+$label-color: #333;
+$placeholder-color: #888;
+$input-padding: 0.6rem;  // Reduced padding for inputs
+$border-radius: 6px;
+$spacing: 0.8rem;  // Reduced spacing between elements
+$margin-bottom: 1.2rem;  // Slightly smaller bottom margin
+
+.task-form {
+  background-color: #f9f9f9;
+  padding: 1.5rem;  // Reduced padding for overall form
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;  // Reduced max-width to make the form a bit more compact
+  margin: 1.5rem auto;  // Slightly reduced margin for the form container
+  display: flex;
+  flex-direction: column;
+  gap: $spacing;
+
+  h2 {
+    font-size: 1.6rem;  // Smaller header font size
+    margin-bottom: 1.5rem;  // Reduced margin at the bottom
+    text-align: center;
+    color: $label-color;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing;
+    margin-bottom: $margin-bottom;
+
+    label {
+      font-size: 1rem;  // Slightly smaller font size for labels
+      font-weight: 600;
+      color: $label-color;
+      margin-bottom: 0.3rem;  // Reduced margin for labels
+    }
+
+    input,
+    select,
+    textarea {
+      padding: $input-padding;
+      font-size: 0.9rem;  // Slightly smaller font size for inputs
+      border: 1px solid $input-border;
+      border-radius: $border-radius;
+      background-color: $input-bg;
+      transition: border 0.3s ease;
+      width: 100%;  // Ensures the inputs are full-width
+
+      &:focus {
+        border-color: $focus-border;
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $placeholder-color;
+      }
+    }
+
+    textarea {
+      min-height: 80px;  // Reduced min-height for textarea
+      resize: vertical;
+    }
+
+    select {
+      height: 35px;  // Reduced height for select dropdown
+    }
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;  // Slightly smaller margin for actions
+
+    button {
+      padding: 0.6rem 1.2rem;  // Reduced padding for buttons
+      background-color: $button-bg;
+      border: none;
+      border-radius: $border-radius;
+      color: white;
+      font-size: 0.9rem;  // Slightly smaller font size for buttons
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 48%;  // Buttons are aligned side-by-side with space between
+
+      &:hover {
+        background-color: $button-hover;
+      }
+    }
+  }
+}

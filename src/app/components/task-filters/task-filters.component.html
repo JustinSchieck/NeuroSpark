@@ -1,0 +1,30 @@
+<div class="task-filters">
+  <div class="filter-group">
+    <label>Energy Level:</label>
+    <select [(ngModel)]="energy" (change)="onFilterChange()">
+      <option value="">All</option>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+  </div>
+
+  <div class="filter-group">
+    <label>Avoidance (1–5):</label>
+    <input
+      type="number"
+      min="0"
+      max="5"
+      [(ngModel)]="avoidance"
+      (change)="onFilterChange()" />
+  </div>
+
+  <div class="filter-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="dopamineHit" (change)="onFilterChange()" />
+      Show Dopamine Tasks Only 🔥
+    </label>
+  </div>
+
+  <button (click)="resetFilters()">Reset Filters</button>
+</div>

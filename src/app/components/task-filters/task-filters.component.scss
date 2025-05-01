@@ -1,0 +1,59 @@
+$bg-color: #f4f4f4;
+$border-color: #ccc;
+$primary-color: #007bff;
+$primary-hover: #0056b3;
+$text-color: #333;
+
+.task-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: $bg-color;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 160px;
+
+    label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: $text-color;
+
+      input[type='checkbox'] {
+        margin-right: 0.5rem;
+        transform: scale(1.2);
+      }
+    }
+
+    input,
+    select {
+      padding: 0.4rem 0.6rem;
+      border-radius: 5px;
+      border: 1px solid $border-color;
+      font-size: 0.95rem;
+    }
+  }
+
+  button {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    background-color: $primary-color;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+}

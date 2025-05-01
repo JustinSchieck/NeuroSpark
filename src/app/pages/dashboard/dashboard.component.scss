@@ -1,0 +1,79 @@
+$primary-bg: #f4f7fa;
+$card-bg: #fff;
+$border-color: #ddd;
+$box-shadow: rgba(0, 0, 0, 0.1);
+$header-bg: #007bff;
+$header-color: #fff;
+$spacing: 1.5rem;
+$card-radius: 8px;
+
+.dashboard {
+  background-color: $primary-bg;
+  min-height: 100vh;
+  padding: $spacing;
+
+  .dashboard-header {
+    background-color: $header-bg;
+    color: $header-color;
+    padding: 2rem;
+    border-radius: $card-radius;
+    box-shadow: 0 2px 6px $box-shadow;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  .dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing;
+
+    .task-filters-container {
+      display: flex;
+      justify-content: space-between;
+      gap: $spacing;
+      flex-wrap: wrap;
+
+      .task-filters {
+        flex: 1;
+        min-width: 300px;
+        background-color: $card-bg;
+        padding: 2rem;
+        border-radius: $card-radius;
+        box-shadow: 0 2px 6px $box-shadow;
+      }
+    }
+
+    .task-list-container {
+      background-color: $card-bg;
+      padding: 2rem;
+      border-radius: $card-radius;
+      box-shadow: 0 2px 6px $box-shadow;
+    }
+  }
+
+  .add-task-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $spacing;
+
+    button {
+      padding: 1rem 2rem;
+      background-color: #28a745;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #218838;
+      }
+    }
+  }
+}

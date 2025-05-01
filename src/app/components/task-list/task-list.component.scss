@@ -1,0 +1,102 @@
+$task-bg: #fff;
+$completed-bg: #e9f7e9;
+$border-color: #ddd;
+$primary-color: #007bff;
+$hover-color: #0056b3;
+$delete-btn-bg: #f44336;
+$delete-btn-hover: #d32f2f;
+$empty-state-bg: #f1f1f1;
+
+.task-list-container {
+  .empty-state {
+    background-color: $empty-state-bg;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: $task-bg;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      border: 1px solid $border-color;
+      transition: background-color 0.2s;
+
+      &.completed {
+        background-color: $completed-bg;
+        text-decoration: line-through;
+        opacity: 0.7;
+      }
+
+      .task-content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        input[type="checkbox"] {
+          transform: scale(1.5);
+          cursor: pointer;
+        }
+
+        .task-details {
+          flex: 1;
+
+          h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+          }
+
+          p {
+            color: #777;
+            font-size: 1rem;
+          }
+
+          .task-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+
+            .tag {
+              padding: 0.3rem 0.6rem;
+              border-radius: 12px;
+              font-size: 0.9rem;
+              background-color: #e0e0e0;
+              color: #333;
+
+              &:nth-child(1) {
+                background-color: #dff0d8;
+              }
+            }
+          }
+        }
+      }
+
+      .delete-btn {
+        background-color: $delete-btn-bg;
+        border: none;
+        color: white;
+        border-radius: 50%;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $delete-btn-hover;
+        }
+      }
+    }
+  }
+}
